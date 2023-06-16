@@ -1,4 +1,10 @@
-## SecurityDashboard
+# SecurityDashboard
+
+## [Live Deployment](https://uibk-cybersecurity-dashboard-k1asgftte-elidll.vercel.app)
+
+## [Dateset](./resources)
+
+## Local installation
 
 ### Requirements
 
