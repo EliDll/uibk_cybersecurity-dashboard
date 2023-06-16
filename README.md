@@ -1,4 +1,4 @@
-# SecurityDashboard
+# uibk Software Engineering Project: Cybersecurity Dashboard
 
 ## [Live Deployment](https://uibk-cybersecurity-dashboard-k1asgftte-elidll.vercel.app)
 
