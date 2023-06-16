@@ -1,0 +1,33 @@
+<mat-card class="breadcrumbs-card">
+  <mat-card-content class="breadcrumbs-card-content">
+    <ng-container *ngIf="currentSegments$ | async; let currentSegmentsInner$">
+      <div
+        *ngIf="currentSegmentsInner$ | async; let currentSegments"
+        class="segments-container"
+      >
+        <div *ngFor="let segment of currentSegments" class="segment">
+          <a class="link-segment" (click)="navigateTo(segment.route)">
+            {{ segment.title }}
+          </a>
+          <ng-container *ngIf="segment.next !== undefined">
+            <mat-icon
+              [matMenuTriggerFor]="nextMenu"
+              class="next-icon link-segment"
+              >double_arrow
+            </mat-icon>
+            <mat-menu #nextMenu="matMenu">
+              <button
+                *ngFor="let n of segment.next"
+                mat-menu-item
+                (click)="navigateTo(n.route)"
+              >
+                {{ n.title }}
+              </button>
+            </mat-menu>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+    <app-date-filter></app-date-filter>
+  </mat-card-content>
+</mat-card>

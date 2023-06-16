@@ -1,0 +1,162 @@
+{
+  "developers": [
+    {
+      "id": "Developer1",
+      "name": "Developer1",
+      "loggedTrainingTime": 10,
+      "completedTrainingUnitsIds": ["Unit1", "Unit2"],
+      "scheduledTrainingUnitsIds": ["Unit3", "Unit4"],
+      "productTeamsIds": ["Team2"]
+    },
+    {
+      "id": "Developer2",
+      "name": "Developer2",
+      "loggedTrainingTime": 0,
+      "completedTrainingUnitsIds": ["Unit3"],
+      "scheduledTrainingUnitsIds": ["Unit2", "Unit3"],
+      "productTeamsIds": ["Team1"]
+    },
+    {
+      "id": "Developer3",
+      "name": "Developer3",
+      "loggedTrainingTime": 100,
+      "completedTrainingUnitsIds": ["Unit2", "Unit3", "Unit4"],
+      "scheduledTrainingUnitsIds": [],
+      "productTeamsIds": ["Team2", "Team3"]
+    }
+  ],
+  "trainingUnits": [
+    {
+      "id": "Unit1",
+      "revisionDate": "2023-03-01",
+      "addressedRiskIds": ["A01", "A02"]
+    },
+    {
+      "id": "Unit2",
+      "revisionDate": "2023-04-14",
+      "addressedRiskIds": ["A03", "A10", "A04"]
+    },
+    {
+      "id": "Unit3",
+      "revisionDate": "2023-04-15",
+      "addressedRiskIds": ["A06", "A04", "A08"]
+    },
+    {
+      "id": "Unit4",
+      "revisionDate": "2023-04-16",
+      "addressedRiskIds": ["A07"]
+    }
+  ],
+  "productTeams": [
+    {
+      "id": "Team1",
+      "name": "Team1",
+      "technologyIds": ["Angular", "Spring", "Java"]
+    },
+    {
+      "id": "Team2",
+      "name": "Team2",
+      "technologyIds": ["Kotlin", "Android", "iOS", "Swift", "Spring"]
+    },
+    {
+      "id": "Team3",
+      "name": "Team3",
+      "technologyIds": ["ASP.NET"]
+    },
+    {
+      "id": "Team4",
+      "name": "Team3",
+      "technologyIds": ["Kotlin", "Android", "iOS", "Swift", "Python"]
+    }
+  ],
+  "technologies": [
+    {
+      "id": "Angular",
+      "name": "Angular"
+    },
+    {
+      "id": "Spring",
+      "name": "Spring"
+    },
+    {
+      "id": "Java",
+      "name": "Java"
+    },
+    {
+      "id": "Kotlin",
+      "name": "Kotlin"
+    },
+    {
+      "id": "Android",
+      "name": "Android"
+    },
+    {
+      "id": "iOS",
+      "name": "iOS"
+    },
+    {
+      "id": "Swift",
+      "name": "Swift"
+    },
+    {
+      "id": "ASP.NET",
+      "name": "ASP.NET"
+    },
+    {
+      "id": "Python",
+      "name": "Python"
+    }
+  ],
+  "securityRisks": [
+    {
+      "id": "A01",
+      "name": "Broken Access Control",
+      "url": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+    },
+    {
+      "id": "A02",
+      "name": "Cryptographic Failures",
+      "url": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+    },
+    {
+      "id": "A03",
+      "name": "Insecure Design",
+      "url": "https://owasp.org/Top10/A03_2021-Injection/"
+    },
+    {
+      "id": "A04",
+      "name": "Injection",
+      "url": "https://owasp.org/Top10/A04_2021-Insecure_Design/"
+    },
+    {
+      "id": "A05",
+      "name": "Security Misconfiguration",
+      "url": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"
+    },
+    {
+      "id": "A06",
+      "name": "Vulnerable and Outdated Components",
+      "url": "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"
+    },
+    {
+      "id": "A07",
+      "name": "Identification and Authentication Failures",
+      "url": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"
+    },
+    {
+      "id": "A08",
+      "name": "Software and Data Integrity Failures",
+      "url": "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/"
+    },
+    {
+      "id": "A09",
+      "name": "Security Logging and Monitoring Failures",
+      "url": "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/"
+    },
+    {
+      "id": "A10",
+      "name": "Server-Side Request Forgery",
+      "url": "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"
+    }
+  ]
+}

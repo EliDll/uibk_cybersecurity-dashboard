@@ -1,0 +1,35 @@
+app-date-filter {
+  margin-right: 10px;
+}
+
+.breadcrumbs-card {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.breadcrumbs-card-content {
+  padding: 0px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-segment:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.next-icon {
+  color: rgba(243, 34, 29, 1);
+}
+
+.segments-container {
+  display: flex;
+}
+
+.segment {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1vw;
+  place-items: center center;
+  margin-left: 1vw;
+}

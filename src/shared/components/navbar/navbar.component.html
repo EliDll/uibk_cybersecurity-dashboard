@@ -1,0 +1,48 @@
+<mat-toolbar>
+  <a (click)="navigateTo(routeNames.OVERALL)">
+    <div class="title">
+      <span>Security Dashboard</span>
+    </div>
+  </a>
+  <a
+    [routerLink]="[routeNames.TRAINING_VIEW]"
+    [routerLinkActive]="'is-active'"
+    mat-button
+  >
+    <mat-icon
+      fontIcon="supervisor_account"
+      [routerLinkActive]="'is-active'"
+    ></mat-icon>
+    Training</a
+  >
+  <a
+    [routerLink]="[routeNames.DEVELOPMENT_VIEW]"
+    [routerLinkActive]="'is-active'"
+    mat-button
+  >
+    <mat-icon fontIcon="code" [routerLinkActive]="'is-active'"></mat-icon>
+    Development</a
+  >
+  <a
+    [routerLink]="[routeNames.DEPLOYMENT_VIEW]"
+    [routerLinkActive]="'is-active'"
+    mat-button
+  >
+    <mat-icon
+      fontIcon="dynamic_form"
+      [routerLinkActive]="'is-active'"
+    ></mat-icon>
+    Deployment</a
+  >
+  <a
+    [routerLink]="[routeNames.IMPORT]"
+    [routerLinkActive]="'is-active'"
+    mat-button
+  >
+    <mat-icon
+      fontIcon="drive_folder_upload"
+      [routerLinkActive]="'is-active'"
+    ></mat-icon>
+    Data Import</a
+  >
+</mat-toolbar>

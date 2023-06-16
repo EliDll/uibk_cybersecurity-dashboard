@@ -1,0 +1,15 @@
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5vh;
+  margin: 0.5vh;
+  grid-template-rows: 42vh;
+}
+
+.chart-container-thirds {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.5vh;
+  margin: 0.5vh;
+  grid-template-rows: 45vh;
+}

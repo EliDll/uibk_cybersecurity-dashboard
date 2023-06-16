@@ -1,0 +1,7 @@
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5vh;
+  margin: 0.5vh;
+  grid-template-rows: 60vh;
+}

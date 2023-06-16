@@ -1,0 +1,22 @@
+mat-card {
+  margin: 0.5vh;
+}
+
+mat-card-title {
+  padding: 0.5vh;
+  padding-left: 1vw;
+}
+
+.status-entry {
+  font-weight: bold;
+}
+
+.status-entry-completed {
+  @extend .status-entry;
+  color: rgba(243, 34, 29, 1);
+}
+
+.status-entry-scheduled {
+  @extend .status-entry;
+  color: rgba(219, 206, 189, 1);
+}

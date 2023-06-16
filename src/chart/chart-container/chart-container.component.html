@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ configuration.chartTitle }}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <canvas
+      baseChart
+      [data]="(configuration.chartData | async) ?? undefined"
+      [legend]="configuration.chartLegend"
+      [type]="configuration.chartType"
+      [options]="configuration.chartOptions"
+      (chartClick)="configuration.onChartClicked($event)"
+    >
+    </canvas>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,76 @@
+<mat-card>
+  <mat-card-title> Recommended Training Units </mat-card-title>
+  <mat-card-content *ngIf="rankedTrainings$ | async; let rankedTrainings">
+    <table mat-table [dataSource]="rankedTrainings" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Training Unit</th>
+        <td mat-cell *matCellDef="let unit">{{ unit.id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef>OWASP Coverage Improvement</th>
+        <td mat-cell *matCellDef="let unit">
+          <div class="score-cell">
+            {{ unit.score }}
+            <mat-progress-bar
+              *ngIf="teamSizeFactor$ | async; let teamSizeFactor"
+              mode="determinate"
+              [value]="unit.score * 10 * teamSizeFactor"
+            ></mat-progress-bar>
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="risks">
+        <th mat-header-cell *matHeaderCellDef>Adressed OWASP risks</th>
+        <td mat-cell *matCellDef="let entry">
+          <div class="risk-cell">
+            <div *ngFor="let risk of entry.risks">
+              <a [href]="risk.url"> {{ risk.id }}</a>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="schedule">
+        <th mat-header-cell *matHeaderCellDef>
+          <div>
+            <mat-icon
+              *ngIf="isDateFiltered$ | async"
+              matTooltip="Reset Snapshot Date to schedule trainings."
+              [matTooltipDisabled]="(isDateFiltered$ | async) === false"
+              class="warn-icon"
+              >warning</mat-icon
+            >
+            Actions
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let unit">
+          <button
+            *ngIf="trainingData$ | async; let trainingData"
+            [disabled]="isDateFiltered$ | async"
+            mat-raised-button
+            color="primary"
+            (click)="onScheduleClick(unit.id, trainingData)"
+          >
+            Schedule
+          </button>
+        </td>
+      </ng-container>
+
+      <tr
+        mat-header-row
+        *matHeaderRowDef="['id', 'score', 'risks', 'schedule']"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: ['id', 'score', 'risks', 'schedule']"
+      ></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

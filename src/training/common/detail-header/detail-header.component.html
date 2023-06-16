@@ -1,0 +1,8 @@
+<div class="header">
+  <button mat-icon-button (click)="onNavigateBack()">
+    <mat-icon>arrow_back_ios</mat-icon>
+  </button>
+  <div *ngIf="title | async; let title">
+    <h2>Detail View: {{ title }}</h2>
+  </div>
+</div>

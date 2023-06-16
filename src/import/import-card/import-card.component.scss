@@ -1,0 +1,32 @@
+.selectable:hover {
+  cursor: pointer;
+}
+
+.recently-container {
+  min-height: 200px;
+  min-width: 400px;
+  margin-top: 2vh;
+}
+
+.no-recently {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.upload-wrapper {
+  display: grid;
+  place-items: center center;
+  width: 100%;
+  margin: 1rem;
+}
+
+.center {
+  display: grid;
+  place-items: center center;
+}
+
+.top-margin {
+  margin-top: 1rem;
+}

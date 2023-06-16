@@ -1,0 +1,30 @@
+mat-card {
+  margin: 0.5vh;
+}
+
+mat-card-title {
+  padding: 0.5vh;
+  padding-left: 1vw;
+}
+
+.warn-icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-size: 1.125rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  margin-left: -4px;
+  margin-right: 8px;
+}
+
+.score-cell {
+  display: flex;
+  place-items: center center;
+  gap: 1vw;
+}
+
+.risk-cell {
+  display: flex;
+  gap: 1vw;
+}

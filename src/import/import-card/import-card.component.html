@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-header class="center">
+    <mat-card-title>Import new Data Set</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="center">
+    <mat-list class="top-margin">
+      <mat-divider></mat-divider>
+      <input
+        #fileInput
+        hidden="true"
+        type="file"
+        accept=".json, .xlsx"
+        onclick="this.value=null"
+        (change)="onFileChange($event)"
+      />
+      <div>
+        <button
+          mat-stroked-button
+          (click)="fileInput.click()"
+          matTooltip="Accepted file types: .xlsx, .json"
+        >
+          <mat-icon>drive_folder_upload</mat-icon>
+          Import from file
+        </button>
+      </div>
+      <div class="upload-wrapper" *ngIf="false">
+        <mat-divider></mat-divider>
+        <mat-list class="recently-container">
+          <ng-container *ngIf="entries.length">
+            <div mat-subheader>Recently used files</div>
+            <mat-list-item
+              class="selectable"
+              *ngFor="let entry of entries"
+              (click)="fileSelected.emit(entry)"
+            >
+              <mat-icon matListItemIcon>article</mat-icon>
+              <div matListItemTitle>{{ entry.fileName }}</div>
+              <div matListItemLine>{{ entry.createdAt | date }}</div>
+            </mat-list-item>
+          </ng-container>
+          <div class="mat-body-strong no-recently" *ngIf="!entries.length">
+            No recently used files
+          </div>
+        </mat-list>
+      </div>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions> </mat-card-actions>
+</mat-card>

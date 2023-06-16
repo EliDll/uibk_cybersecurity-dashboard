@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title> Current Training </mat-card-title>
+  <mat-card-content *ngIf="trainings$ | async; let trainings">
+    <table mat-table [dataSource]="trainings" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Training Unit</th>
+        <td mat-cell *matCellDef="let entry">{{ entry.trainingUnitId }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="hours">
+        <th mat-header-cell *matHeaderCellDef>Logged time [h]</th>
+        <td mat-cell *matCellDef="let entry">{{ entry.loggedTime }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let entry">
+          <p *ngIf="entry.completed" class="status-entry-completed">
+            COMPLETED
+          </p>
+          <p *ngIf="!entry.completed" class="status-entry-scheduled">
+            SCHEDULED
+          </p>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['id', 'hours', 'status']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'hours', 'status']"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

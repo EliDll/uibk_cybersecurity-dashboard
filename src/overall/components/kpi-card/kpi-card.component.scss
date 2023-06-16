@@ -1,0 +1,80 @@
+mat-card {
+  padding: 2vh;
+  margin: 3vh;
+}
+
+mat-card-title {
+  display: flex;
+  place-items: center center;
+  gap: 0.5vw;
+}
+
+mat-card-subtitle {
+  margin-top: -20px;
+
+  div {
+    display: flex;
+    align-items: end;
+    gap: 1vh;
+
+    p:nth-child(1) {
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    p:nth-child(2) {
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}
+
+.title-icon {
+  color: rgba(243, 34, 29, 1);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.icon {
+  transform: scale(5);
+  margin: 50px;
+}
+
+.up-icon {
+  @extend .icon;
+  color: #4caf50;
+}
+
+.up-icon.invert {
+  @extend .icon;
+  color: #ff5722;
+}
+
+.down-icon {
+  @extend .icon;
+  color: #ff5722;
+}
+
+.down-icon.invert {
+  @extend .icon;
+  color: #4caf50;
+}
+
+.current-kpi {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.last-kpi {
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.label {
+  font-weight: 100;
+  font-size: 20px;
+}

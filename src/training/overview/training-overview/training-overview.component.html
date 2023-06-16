@@ -1,0 +1,17 @@
+<app-breadcrumbs [config]="trainingBreadcrumbs"></app-breadcrumbs>
+<div class="chart-container">
+  <app-chart-container
+    [configuration]="addressedRiskCategoriesChartConfiguration"
+    class="addressed-risks-chart item"
+  ></app-chart-container>
+  <div class="chart-inner">
+    <app-chart-container
+      [configuration]="trainingCompletionChartConfiguration"
+      class="training-completion-chart item"
+    ></app-chart-container>
+    <app-chart-container
+      [configuration]="timePerTrainingChartConfiguration"
+      class="addressed-risks-chart item"
+    ></app-chart-container>
+  </div>
+</div>

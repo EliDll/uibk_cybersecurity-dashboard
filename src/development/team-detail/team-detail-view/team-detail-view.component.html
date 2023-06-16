@@ -1,0 +1,19 @@
+<app-breadcrumbs [config]="developmentBreadCrumbService"></app-breadcrumbs>
+<div class="chart-container">
+  <app-chart-container [configuration]="teamPentestFindingsConfiguration">
+  </app-chart-container>
+
+  <app-chart-container [configuration]="pentestSeverityCountConfiguration">
+  </app-chart-container>
+
+  <app-chart-container [configuration]="codeScanPenTestChartConfiguration">
+  </app-chart-container>
+</div>
+<div class="chart-container-thirds">
+  <ng-container *ngIf="currentProduct$ | async; let currentProduct">
+    <app-pentest-grid [product]="currentProduct"> </app-pentest-grid>
+  </ng-container>
+  <app-chart-container
+    [configuration]="pentestDistributionChartConfiguration"
+  ></app-chart-container>
+</div>

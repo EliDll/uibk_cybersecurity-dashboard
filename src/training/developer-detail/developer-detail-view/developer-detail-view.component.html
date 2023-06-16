@@ -1,0 +1,19 @@
+<app-breadcrumbs [config]="trainingBreadcrumbs"></app-breadcrumbs>
+
+<div class="chart-container">
+  <app-chart-container
+    [configuration]="owaspCoverage"
+    class="spent-time-chart chart"
+  ></app-chart-container>
+  <app-chart-container
+    [configuration]="developerTrainingCompletionChartConfiguration"
+    class="chart"
+  ></app-chart-container>
+</div>
+
+<ng-container *ngIf="currentDeveloper$ | async; let currentDeveloper">
+  <app-developer-recommended-training [currentDeveloper]="currentDeveloper">
+  </app-developer-recommended-training>
+  <app-developer-training-overview [currentDeveloper]="currentDeveloper">
+  </app-developer-training-overview>
+</ng-container>

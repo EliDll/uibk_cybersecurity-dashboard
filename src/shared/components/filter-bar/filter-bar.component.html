@@ -1,0 +1,7 @@
+<mat-card *ngIf="currentFilter$ | async; let currentFilter">
+  <mat-card-content class="card-wrapper">
+    <app-training-filter-bar
+      *ngIf="currentFilter === 'training'"
+    ></app-training-filter-bar>
+  </mat-card-content>
+</mat-card>

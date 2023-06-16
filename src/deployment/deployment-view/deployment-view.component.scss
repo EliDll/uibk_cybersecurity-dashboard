@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  flex-direction: column;
+  place-items: center center;
+  width: 100vw;
+  margin-top: 30vh;
+
+  p {
+    font-size: 40px;
+    font-weight: 100;
+  }
+}

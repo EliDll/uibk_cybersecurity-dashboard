@@ -1,0 +1,36 @@
+mat-toolbar {
+  background-color: white;
+  margin-bottom: 0.5vh;
+}
+
+.title {
+  background-image: linear-gradient(
+    to right,
+    rgba(243, 34, 29, 0.8),
+    rgba(243, 34, 29, 0.8),
+    rgba(243, 34, 29, 0.8),
+    white
+  );
+  color: white;
+  min-height: 65px;
+  place-items: center center;
+  display: grid;
+  margin-left: -20px;
+  padding-right: 100px;
+  margin-right: 20px;
+
+  span {
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+}
+
+.spacer {
+  width: 3rem;
+}
+
+.is-active {
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}

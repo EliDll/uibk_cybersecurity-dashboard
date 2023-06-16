@@ -1,0 +1,13 @@
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 87vh;
+  gap: 0.5vh;
+  margin: 0.5vh;
+}
+
+.chart-inner {
+  display: grid;
+  grid-template-rows: 43.5vh 43vh;
+  gap: 0.5vh;
+}

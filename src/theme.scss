@@ -1,0 +1,69 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$hilti-red: (
+  50: #ffeaed,
+  100: #ffcbce,
+  200: #fa9692,
+  300: #f36b67,
+  400: #fd453e,
+  500: #ff2f1a,
+  600: #f3211d,
+  700: #e10d18,
+  800: #d4000e,
+  900: #c70000,
+  contrast: (
+    50: #222222,
+    100: #222222,
+    200: #222222,
+    300: #222222,
+    400: #222222,
+    500: #222222,
+    600: #222222,
+    700: #222222,
+    800: #222222,
+    900: #222222,
+  ),
+);
+
+$burgundy: (
+  50: #fae3e8,
+  100: #f4b8c7,
+  200: #eb8ba3,
+  300: #e35e7f,
+  400: #db3f66,
+  500: #d4244e,
+  600: #c4204c,
+  700: #af1c48,
+  800: #9b1745,
+  900: #77113d,
+  contrast: (
+    50: #ffffff,
+    100: #ffffff,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  ),
+);
+
+$my-primary: mat.define-palette($hilti-red);
+$my-accent: mat.define-palette($burgundy);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($my-theme);

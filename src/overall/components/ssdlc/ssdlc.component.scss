@@ -1,0 +1,44 @@
+svg {
+  display: block;
+  margin: 30px auto auto;
+
+  max-height: 20%;
+}
+
+.overlay-container {
+  .overlay {
+    opacity: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:hover .overlay:not(:hover) {
+    opacity: 0.8;
+  }
+}
+
+.training-view-container {
+  transition: transform 0.3s ease;
+
+  &.animate {
+    transform: translate(60px, -90px);
+  }
+}
+
+.development-view-container {
+  transition: transform 0.3s ease;
+
+  &.animate {
+    transform: translate(60px, 90px);
+  }
+}
+
+.deployment-view-container {
+  transition: transform 0.3s ease;
+
+  &.animate {
+    transform: translate(-100px, 0px);
+  }
+}

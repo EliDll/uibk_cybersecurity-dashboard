@@ -1,0 +1,530 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  height="75vh"
+  viewBox="-100 -100 1200 1200"
+>
+  <defs>
+    <polygon
+      id="arrow"
+      points="500,90 470,135 500,135 530,90 500,45 470,45"
+      [attr.fill]="ARROW_COLOR"
+      stroke="black"
+      stroke-width="6"
+    />
+    <path
+      id="outer-divider"
+      d="M500,0 L500,170"
+      [attr.stroke]="TITLE_DIVIDER_COLOR"
+      stroke-width="8"
+    />
+    <path
+      id="inner-divider"
+      d="M500,170 L500,280"
+      [attr.stroke]="DESCRIPTION_DIVIDER_COLOR"
+      stroke-width="8"
+    />
+  </defs>
+
+  <g class="training-view-container">
+    <path
+      id="training-view"
+      d="M272,107 A480,480 0 0 1 955,500"
+      fill="transparent"
+    />
+    <text font-size="50" font-weight="200" [attr.fill]="OUTER_FONT_COLOR">
+      <textPath
+        xlink:href="#training-view"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        Training Insights
+      </textPath>
+    </text>
+  </g>
+
+  <g class="development-view-container">
+    <path
+      id="development-view"
+      d="M272,893 A480,480 0 0 0 955,500"
+      fill="transparent"
+    />
+    <text font-size="50" font-weight="200" [attr.fill]="OUTER_FONT_COLOR">
+      <textPath
+        xlink:href="#development-view"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        Development Insights
+      </textPath>
+    </text>
+  </g>
+
+  <g class="deployment-view-container">
+    <path
+      transform="rotate(240, 500, 500)"
+      id="deployment-view"
+      d="M272,107 A480,480 0 0 1 955,500"
+      fill="transparent"
+    />
+    <text font-size="50" font-weight="200" [attr.fill]="OUTER_FONT_COLOR">
+      <textPath
+        xlink:href="#deployment-view"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        Deployment Insights
+      </textPath>
+    </text>
+  </g>
+
+  <g>
+    <circle
+      cx="500"
+      cy="500"
+      r="500"
+      [attr.fill]="TITLE_BACKGROUND_COLOR"
+      stroke="black"
+      stroke-width="0"
+    />
+
+    <path
+      id="requirements-title"
+      d="M300,150 A400,400 0 0 1 700,150"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#requirements-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        1) Requirements Analysis
+      </textPath>
+    </text>
+
+    <path
+      transform="rotate(60 500 500)"
+      id="design-title"
+      d="M300,150 A400,400 0 0 1 700,150"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#design-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        2) Design
+      </textPath>
+    </text>
+
+    <path
+      transform="rotate(300 500 500)"
+      id="maintenance-title"
+      d="M300,150 A400,400 0 0 1 700,150"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#maintenance-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        6) Maintenance
+      </textPath>
+    </text>
+
+    <path
+      transform="rotate(-60 500 500)"
+      id="development-title"
+      d="M300,850 A400,400 0 0 0 700,850"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#development-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        3) Development
+      </textPath>
+    </text>
+
+    <path
+      id="testing-title"
+      d="M300,850 A400,400 0 0 0 700,850"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#testing-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        4) Testing
+      </textPath>
+    </text>
+
+    <path
+      transform="rotate(60 500 500)"
+      id="release-title"
+      d="M300,850 A400,400 0 0 0 700,850"
+      fill="transparent"
+    />
+    <text font-size="30" [attr.fill]="TITLE_FONT_COLOR">
+      <textPath
+        xlink:href="#release-title"
+        text-anchor="middle"
+        startOffset="50%"
+        alignment-baseline="middle"
+      >
+        5) Release
+      </textPath>
+    </text>
+
+    <use href="#outer-divider" transform="rotate(-30,500,500)" />
+    <use href="#outer-divider" transform="rotate(30,500,500)" />
+    <use href="#outer-divider" transform="rotate(90,500,500)" />
+    <use href="#outer-divider" transform="rotate(150,500,500)" />
+    <use href="#outer-divider" transform="rotate(210,500,500)" />
+    <use href="#outer-divider" transform="rotate(270,500,500)" />
+
+    <use transform="rotate(30 500 500)" href="#arrow" />
+    <use transform="rotate(90 500 500)" href="#arrow" />
+    <use transform="rotate(150 500 500)" href="#arrow" />
+    <use transform="rotate(210 500 500)" href="#arrow" />
+    <use transform="rotate(270 500 500)" href="#arrow" />
+    <use transform="rotate(330 500 500)" href="#arrow" />
+  </g>
+
+  <g>
+    <circle
+      cx="500"
+      cy="500"
+      r="330"
+      [attr.fill]="DESCRIPTION_BACKGROUND_COLOR"
+      stroke="black"
+      stroke-width="4"
+    />
+
+    <g>
+      <path
+        id="requirements-description"
+        d="M360,270 A270,270 0 0 1 640,270"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#requirements-description"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Risk Assessment
+        </textPath>
+      </text>
+    </g>
+
+    <g>
+      <path
+        transform="rotate(60 500 500)"
+        id="design-description-1"
+        d="M350,240 A300,300 0 0 1 650,240"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#design-description-1"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Threat Modelling
+        </textPath>
+      </text>
+
+      <path
+        transform="rotate(60 500 500)"
+        id="design-description-2"
+        d="M360,270 A270,270 0 0 1 640,270"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#design-description-2"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          and
+        </textPath>
+      </text>
+
+      <path
+        transform="rotate(60 500 500)"
+        id="design-description-3"
+        d="M380,290 A270,270 0 0 1 620,290"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#design-description-3"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Design Review
+        </textPath>
+      </text>
+    </g>
+
+    <g>
+      <path
+        transform="rotate(-60 500 500)"
+        id="maintenance-description-1"
+        d="M350,240 A300,300 0 0 1 650,240"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#maintenance-description-1"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="hanging"
+        >
+          Operational
+        </textPath>
+      </text>
+
+      <path
+        transform="rotate(-60 500 500)"
+        id="maintenance-description-2"
+        d="M380,290 A270,270 0 0 1 620,290"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#maintenance-description-2"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="top"
+        >
+          Assurance
+        </textPath>
+      </text>
+    </g>
+
+    <g>
+      <path
+        id="testing-description-1"
+        d="M380,710 A270,270 0 0 0 620,710"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#testing-description-1"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Security Testing
+        </textPath>
+      </text>
+
+      <path
+        id="testing-description-2"
+        d="M360,730 A270,270 0 0 0 640,730"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#testing-description-2"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          and
+        </textPath>
+      </text>
+
+      <path
+        id="testing-description-3"
+        d="M350,760 A300,300 0 0 0 650,760"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#testing-description-3"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Code Review
+        </textPath>
+      </text>
+    </g>
+
+    <g>
+      <path
+        transform="rotate(-60 500 500)"
+        id="development-description"
+        d="M360,730 A270,270 0 0 0 640,730"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#development-description"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Static Analysis
+        </textPath>
+      </text>
+    </g>
+
+    <g>
+      <path
+        transform="rotate(60 500 500)"
+        id="release-description-1"
+        d="M380,710 A270,270 0 0 0 620,710"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#release-description-1"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Security Assessment
+        </textPath>
+      </text>
+
+      <path
+        transform="rotate(60 500 500)"
+        id="release-description-2"
+        d="M360,730 A270,270 0 0 0 640,730"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#release-description-2"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          and
+        </textPath>
+      </text>
+
+      <path
+        transform="rotate(60 500 500)"
+        id="release-description-3"
+        d="M350,760 A300,300 0 0 0 650,760"
+        fill="transparent"
+      />
+      <text font-size="23" [attr.fill]="DESCRIPTION_FONT_COLOR">
+        <textPath
+          xlink:href="#release-description-3"
+          text-anchor="middle"
+          startOffset="50%"
+          alignment-baseline="middle"
+        >
+          Secure Configuration
+        </textPath>
+      </text>
+    </g>
+
+    <use href="#inner-divider" transform="rotate(-30,500,500)" />
+    <use href="#inner-divider" transform="rotate(30,500,500)" />
+    <use href="#inner-divider" transform="rotate(90,500,500)" />
+    <use href="#inner-divider" transform="rotate(150,500,500)" />
+    <use href="#inner-divider" transform="rotate(210,500,500)" />
+    <use href="#inner-divider" transform="rotate(270,500,500)" />
+  </g>
+  <g>
+    <circle
+      cx="500"
+      cy="500"
+      r="220"
+      [attr.fill]="SSDLC_BACKGROUND_COLOR"
+      stroke="black"
+      stroke-width="4"
+    />
+    <text
+      x="500"
+      y="450"
+      [attr.fill]="SSDLC_FONT_COLOR"
+      font-size="35"
+      text-anchor="middle"
+      alignment-baseline="middle"
+      font-weight="bold"
+    >
+      Secure
+    </text>
+    <text
+      x="500"
+      y="500"
+      [attr.fill]="SSDLC_FONT_COLOR"
+      font-size="35"
+      text-anchor="middle"
+      alignment-baseline="middle"
+      font-weight="bold"
+    >
+      Software Development
+    </text>
+    <text
+      x="500"
+      y="550"
+      [attr.fill]="SSDLC_FONT_COLOR"
+      font-size="35"
+      text-anchor="middle"
+      alignment-baseline="middle"
+      font-weight="bold"
+    >
+      Life Cycle
+    </text>
+  </g>
+
+  <g class="overlay-container">
+    <path
+      d="M250,65 A500,500 0 0 1 1000,500 L720,500 A220,220 0 0 0 390,310Z"
+      [attr.fill]="OVERLAY_COLOR"
+      [attr.stroke]="OVERLAY_COLOR"
+      class="overlay"
+      id="training-overlay"
+      (click)="navigateTo(routeNames.TRAINING_VIEW)"
+      (mouseover)="startAnimation('.training-view-container')"
+      (mouseout)="resetAnimation('.training-view-container')"
+    />
+    <path
+      transform="rotate(120, 500, 500)"
+      d="M250,65 A500,500 0 0 1 1000,500 L720,500 A220,220 0 0 0 390,310Z"
+      [attr.fill]="OVERLAY_COLOR"
+      [attr.stroke]="OVERLAY_COLOR"
+      class="overlay"
+      (click)="navigateTo(routeNames.DEVELOPMENT_VIEW)"
+      (mouseover)="startAnimation('.development-view-container')"
+      (mouseout)="resetAnimation('.development-view-container')"
+    />
+    <path
+      transform="rotate(240, 500, 500)"
+      d="M250,65 A500,500 0 0 1 1000,500 L720,500 A220,220 0 0 0 390,310Z"
+      [attr.fill]="OVERLAY_COLOR"
+      [attr.stroke]="OVERLAY_COLOR"
+      class="overlay"
+      (click)="navigateTo(routeNames.DEPLOYMENT_VIEW)"
+      (mouseover)="startAnimation('.deployment-view-container')"
+      (mouseout)="resetAnimation('.deployment-view-container')"
+    />
+  </g>
+</svg>

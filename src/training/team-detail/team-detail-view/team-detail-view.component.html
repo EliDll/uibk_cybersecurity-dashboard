@@ -1,0 +1,20 @@
+<app-breadcrumbs [config]="trainingBreadcrumbs"></app-breadcrumbs>
+<div class="team-container">
+  <div class="chart-container">
+    <app-chart-container
+      [configuration]="owaspCoverage"
+      class="radar-chart chart"
+    ></app-chart-container>
+    <app-chart-container
+      [configuration]="productTeamTrainingCompletionChartConfigurationService"
+      class="product-team-training-completion chart"
+    ></app-chart-container>
+  </div>
+  <ng-container *ngIf="currentTeam$ | async; let currentTeam">
+    <app-team-recommended-training
+      class="recommended-units chart"
+      [currentTeam]="currentTeam"
+    >
+    </app-team-recommended-training>
+  </ng-container>
+</div>

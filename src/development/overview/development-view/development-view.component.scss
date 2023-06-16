@@ -1,0 +1,19 @@
+.chart-container {
+  display: grid;
+  grid-template-columns: 60vw 39vw;
+  gap: 0.5vh;
+  margin: 0.5vh;
+  grid-template-rows: 40vh;
+}
+
+.chart-inner {
+  display: grid;
+  grid-template-rows: 43.5vh 43vh;
+  gap: 0.5vh;
+}
+
+.sync-icon {
+  margin-bottom: -5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

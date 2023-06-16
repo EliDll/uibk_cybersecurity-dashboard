@@ -1,0 +1,38 @@
+<div class="training-filters">
+  <mat-form-field *ngIf="developerOptions$ | async; let developerOptions">
+    <mat-label>Developer</mat-label>
+    <mat-select
+      multiple
+      [value]="selectedDeveloperIds"
+      (selectionChange)="onDevelopersChange($event)"
+    >
+      <mat-option *ngFor="let dev of developerOptions" [value]="dev.id">{{
+        dev.label
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="productTeamOptions$ | async; let productTeamOptions">
+    <mat-label>Product Team</mat-label>
+    <mat-select
+      multiple
+      [value]="selectedProductTeamIds"
+      (selectionChange)="onProductTeamsChange($event)"
+    >
+      <mat-option *ngFor="let pt of productTeamOptions" [value]="pt.id">{{
+        pt.label
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="technologyOptions$ | async; let technologyOptions">
+    <mat-label>Technologies</mat-label>
+    <mat-select
+      multiple
+      [value]="selectedTechnologyIds"
+      (selectionChange)="onTechnologiesChange($event)"
+    >
+      <mat-option *ngFor="let t of technologyOptions" [value]="t.id">{{
+        t.label
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

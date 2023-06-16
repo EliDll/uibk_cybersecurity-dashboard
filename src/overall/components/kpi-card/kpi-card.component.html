@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-title>
+    <mat-icon fontIcon="supervisor_account" class="title-icon"></mat-icon>
+    {{ title }}
+  </mat-card-title>
+  <div class="content">
+    <p class="label">Last month:</p>
+    <p class="last-kpi">
+      {{ kpiTrend.last.toFixed() + suffix }}
+    </p>
+    <mat-icon
+      *ngIf="kpiTrend.current > kpiTrend.last"
+      class="up-icon"
+      [class.invert]="invert"
+    >
+      trending_up
+    </mat-icon>
+    <mat-icon
+      *ngIf="kpiTrend.current <= kpiTrend.last"
+      class="down-icon"
+      [class.invert]="invert"
+    >
+      trending_down
+    </mat-icon>
+    <p class="label">Current:</p>
+    <p class="current-kpi">
+      {{ kpiTrend.current.toFixed() + suffix }}
+    </p>
+  </div>
+  <mat-card-subtitle>
+    <div>
+      <p>Change from last month:</p>
+      <p>{{ kpiTrend.delta.toFixed(1) }}%</p>
+    </div>
+  </mat-card-subtitle>
+</mat-card>

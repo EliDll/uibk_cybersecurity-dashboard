@@ -1,0 +1,15 @@
+<div class="overall-container">
+  <app-kpi-card
+    *ngIf="kpiTrends.trainingKpis$ | async; let trainingKpis"
+    title="Training Completion"
+    suffix="%"
+    [kpiTrend]="trainingKpis"
+  ></app-kpi-card>
+  <app-ssdlc></app-ssdlc>
+  <app-kpi-card
+    *ngIf="kpiTrends.developmentKpis$ | async; let developmentKpis"
+    title="Pentest Severity Rating"
+    [kpiTrend]="developmentKpis"
+    [invert]="true"
+  ></app-kpi-card>
+</div>

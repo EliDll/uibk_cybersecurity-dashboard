@@ -1,0 +1,27 @@
+mat-form-field {
+  width: 200px;
+  margin-right: -10px;
+  place-items: start start;
+  margin-bottom: -25px;
+  height: 65px;
+}
+
+.container {
+  display: flex;
+  place-items: center center;
+  gap: 0.5vw;
+}
+
+.clickable-icon {
+  cursor: pointer;
+}
+
+.form-field-inner {
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: -60px;
+}
+
+.date-input {
+  height: 45px;
+}

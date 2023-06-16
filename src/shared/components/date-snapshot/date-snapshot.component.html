@@ -1,0 +1,30 @@
+<div class="container">
+  <p>Snapshot Date:</p>
+
+  <mat-form-field appearance="fill">
+    <div class="form-field-inner">
+      <button mat-icon-button (click)="onResetDate()">
+        <mat-icon
+          matPrefix
+          class="clickable-icon"
+          [style.color]="currentValue !== maxDate ? 'red' : 'gray'"
+          >history
+        </mat-icon>
+      </button>
+      <input
+        class="date-input"
+        matInput
+        [min]="minDate$ | async"
+        [max]="maxDate"
+        [matDatepicker]="picker"
+        [(ngModel)]="currentValue"
+        (dateChange)="onDateChange($event)"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+  </mat-form-field>
+</div>
